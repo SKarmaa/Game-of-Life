@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no'>
+    <title>Game of Life</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-89Q55H77EC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-89Q55H77EC');
+    </script>
+    <!-- /Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="helpers.js"></script>
+    <script src="examples.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="titleh1">
+      <h1>Game of Life</h1>
+    </div>
+    <canvas id="grid"></canvas>
+    <div style="padding: 10px;">
+      <small id="stat">(stat)</small>
+    </div>
+    <div style="display: flex;">
+      <div style="margin-left: 15px; margin-right: 20px; padding: 10px; background-color: #235754; border-radius: 5px;">
+        <h1>Controls</h1>
+        <button id="ctl_start" data-hot-key="R">RUN</button>
+        <button id="ctl_stop" data-hot-key="T">stop</button>
+        <button id="ctl_step" data-hot-key="O">one step</button>
+        <button id="ctl_clear">clear</button>
+      </div>
+  
+      <div style="margin-right: 20px; padding: 10px; background-color: #235754; border-radius: 5px;">
+        <h1>Tail</h1>
+        <button data-tail-mode="0">no tail</button>
+        <button data-tail-mode="1">tail</button>
+        <button data-tail-mode="2">rainbow tail</button>
+      </div>
+  
+      <div style="margin-right: 20px; padding: 10px; background-color: #235754; border-radius: 5px;">
+        <h1>Field size</h1>
+        <button data-size-x="0.5" data-size-y="0.5">small (half)</button>
+        <button data-size-x="1" data-size-y="0.7">normal</button>
+        <button data-size-x="1" data-size-y="1">full screen (scroll it)</button>
+        <button data-size-x="2" data-size-y="2">double screen (scroll it)</button>
+      </div>
+  
+      <div style="margin-right: 20px; padding: 10px; background-color: #235754; border-radius: 5px;">
+        <h1>Cell size</h1>
+        <button data-cell-size="1">1x1</button>
+        <button data-cell-size="2">2x2</button>
+        <button data-cell-size="3">3x3</button>
+        <button data-cell-size="5">5x5</button>
+        <button data-cell-size="7">7x7</button>
+        <button data-cell-size="10">10x10</button>
+        <button data-cell-size="15">15x15</button>
+        <button data-cell-size="20">20x20</button>
+      </div>
+  
+      <div style="margin-right: 20px; padding: 10px; background-color: #235754; border-radius: 5px;">
+        <h1 id="section-delay">Delay</h1>
+      </div>
+  
+      <div style="margin-right: 20px; padding: 10px; background-color: #235754; border-radius: 5px;">
+        <h1>Presets</h1>
+        <button id="ctl_p_life">LIFE</button>
+      </div>
+    </div>
+  </body>
+</html>
